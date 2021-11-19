@@ -1,0 +1,61 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"pubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "newOrder",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"qty","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "delOrder",
+			"inputs": [
+				{"name":"id","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateOrder",
+			"inputs": [
+				{"name":"id","type":"uint32"},
+				{"name":"price","type":"uint32"},
+				{"name":"done","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getStat",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"complCount","type":"uint32"},{"name":"uncomlCount","type":"uint32"},{"name":"totalPrice","type":"uint32"}],"name":"stat","type":"tuple"}
+			]
+		},
+		{
+			"name": "getListOrders",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"id","type":"uint32"},{"name":"name","type":"bytes"},{"name":"qty","type":"uint32"},{"name":"createdAt","type":"uint64"},{"name":"price","type":"uint32"},{"name":"isDone","type":"bool"}],"name":"orders","type":"tuple[]"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
